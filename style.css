@@ -71,6 +71,12 @@ body {
     border-bottom: 1px solid #e1e4e8;
 }
 
+.header.scrolled {
+    box-shadow: 0 4px 24px rgba(46,160,67,0.13);
+    background: linear-gradient(90deg, #e6f4ea 80%, #fff 100%);
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
 .header h1 {
     font-size: 2.7rem;
     font-weight: 700;
@@ -121,6 +127,12 @@ body {
     border: 2px solid #e1e4e8;
     text-align: left;
     position: relative;
+}
+
+.gh-card.hovered {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 10px 32px rgba(46,160,67,0.13);
+    border-color: #219150;
 }
 
 .gh-card h2 {
