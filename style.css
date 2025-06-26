@@ -13,6 +13,8 @@ body {
     padding: 0;
     color: #24292f;
     min-height: 100vh;
+    font-size: 1.08rem;
+    letter-spacing: 0.01em;
 }
 
 .navbar {
@@ -26,23 +28,25 @@ body {
     top: 0;
     background: #fff;
     border-bottom: none;
-    box-shadow: 0 2px 8px rgba(27,31,35,0.04);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 16px rgba(46,160,67,0.07);
     z-index: 2;
+    font-size: 1.08rem;
 }
 
 .navbar a {
     color: #219150;
     text-decoration: none;
-    font-size: 0.98rem;
-    font-weight: 500;
+    font-size: 1.08rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     padding: 3px 10px;
     border-radius: 4px;
     background: none;
-    border: 1.5px solid #2ea043;
+    border: 2px solid #2ea043;
     transition: background 0.15s, color 0.15s, border 0.15s;
     box-shadow: none;
     margin: 0;
-    letter-spacing: 0.01em;
     outline: none;
 }
 
@@ -59,16 +63,16 @@ body {
 }
 
 .header {
-    background: #fff;
-    box-shadow: 0 1px 0 #e1e4e8;
+    background: linear-gradient(90deg, #e6f4ea 60%, #fff 100%);
+    border-radius: 0 0 24px 24px;
     padding: 36px 0 18px 0;
     text-align: center;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
     border-bottom: 1px solid #e1e4e8;
 }
 
 .header h1 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: 700;
     margin: 0 0 10px 0;
     color: #24292f;
@@ -77,7 +81,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 18px;
 }
 
 .gh-logo {
@@ -111,22 +115,23 @@ body {
     max-width: 700px;
     margin: 32px auto 0 auto;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 1.5px 6px rgba(27,31,35,0.04);
-    padding: 32px 28px;
-    border: 1px solid #e1e4e8;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(27,31,35,0.07);
+    padding: 36px 32px;
+    border: 2px solid #e1e4e8;
     text-align: left;
     position: relative;
 }
 
 .gh-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-bottom: 16px;
     color: #2ea043;
     font-weight: 700;
-    border-left: 5px solid #2ea043;
-    padding-left: 12px;
-    background: linear-gradient(90deg, #e6f4ea 60%, #fff 100%);
+    border-left: 6px solid #2ea043;
+    padding-left: 16px;
+    background: linear-gradient(90deg, #e6f4ea 70%, #fff 100%);
+    border-radius: 6px;
 }
 
 .skills-list {
@@ -138,9 +143,9 @@ body {
 }
 
 .skills-list li {
-    font-size: 1.08rem;
+    font-size: 1.13rem;
     color: #24292f;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
     padding-left: 2em;
     position: relative;
     line-height: 1.7;
@@ -155,6 +160,12 @@ body {
     position: absolute;
     left: 0;
     top: 0.1em;
+    animation: pop 0.7s cubic-bezier(.68,-0.55,.27,1.55) 1;
+}
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
 }
 
 .gh-badge {
@@ -218,11 +229,11 @@ body {
     margin-bottom: 12px;
 }
 .avatar {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    border: 3px solid #2ea043;
-    box-shadow: 0 4px 16px rgba(46,160,67,0.08);
+    border: 4px solid #2ea043;
+    box-shadow: 0 8px 32px rgba(46,160,67,0.13);
     object-fit: cover;
     background: #fff;
 }
@@ -240,18 +251,18 @@ main {
 }
 .project-card {
     background: #f6f8fa;
-    border-radius: 10px;
-    box-shadow: 0 1.5px 6px rgba(27,31,35,0.06);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(46,160,67,0.07);
     padding: 20px 18px;
-    min-width: 220px;
+    min-width: 240px;
     flex: 1 1 260px;
-    transition: transform 0.15s, box-shadow 0.15s;
-    border: 1px solid #e1e4e8;
+    transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
+    border: 2px solid #e1e4e8;
 }
 .project-card:hover {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 6px 24px rgba(46,160,67,0.10);
-    border-color: #2ea043;
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 10px 32px rgba(46,160,67,0.13);
+    border-color: #219150;
 }
 .project-card.empty {
     opacity: 0.7;
@@ -263,27 +274,36 @@ footer {
     text-align: center;
     padding: 24px 0 12px 0;
     color: #57606a;
-    font-size: 1rem;
-    background: none;
-    margin-top: 32px;
+    font-size: 1.08rem;
+    background: linear-gradient(90deg, #e6f4ea 60%, #fff 100%);
+    border-radius: 16px 16px 0 0;
+    margin-top: 40px;
+    box-shadow: 0 -2px 12px rgba(46,160,67,0.07);
 }
 
 @media (max-width: 600px) {
     .header {
-        padding: 18px 0 10px 0;
+        padding: 14px 0 8px 0;
+        border-radius: 0 0 12px 12px;
     }
     .header h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        gap: 8px;
     }
     .gh-card {
-        padding: 16px 4vw;
+        padding: 12px 2vw;
+        border-radius: 8px;
     }
     .projects-grid {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
     }
     .avatar {
-        width: 70px;
-        height: 70px;
+        width: 64px;
+        height: 64px;
+    }
+    footer {
+        font-size: 0.98rem;
+        border-radius: 8px 8px 0 0;
     }
 }
