@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html lang="nl">
-    <head>
-        <title>Lucas Siewe</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta description="Portfolio of Lucas Siewe">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <title>Lucas Siewe | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Lucas Siewe, young developer from Lelystad, The Netherlands.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
         <ul class="navbar">
-            <li><a href="#about">about</a></li>
-            <li><a href="#skills">skills</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-            <li><a href="#resume">resume</a></li>
-
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
         </ul>
-        <div class="header">
-            <h1>Lucas Siewe
-                <span class="socials">
-                    <a href="https://github.com/lucas6412f1" class="social-link" title="GitHub" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=100072756845708" class="social-link" title="Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
-                </span>
-            </h1>
-            <div class="location"><span class="location-icon">⦿</span>Lelystad, The Netherlands</div>
+    </nav>
+    <header class="header">
+        <div class="avatar-container">
+            <img src="https://avatars.githubusercontent.com/u/164112430?v=4" alt="Lucas Siewe avatar" class="avatar">
         </div>
+        <h1>Lucas Siewe
+            <span class="socials">
+                <a href="https://github.com/lucas6412f1" class="social-link" title="GitHub" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100072756845708" class="social-link" title="Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+            </span>
+        </h1>
+        <div class="location"><span class="location-icon">⦿</span>Lelystad, The Netherlands</div>
+    </header>
+    <main>
         <section id="about" class="gh-card">
             <h2>About Me</h2>
             <p><strong>Hey there!</strong> I am Lucas Siewe, a <strong>self-taught developer</strong> from Lelystad, The Netherlands.</p>
-            <p>I have been coding since 2024, when I was 12. I am now 13 years old, second grade of my local high school, and I am currently learning <strong>JavaScript</strong> and <strong>Python</strong>.</p>
+            <p>I have been coding since 2024, when I was 12. I am now 13 years old, in the second grade of my local high school, and I am currently learning <strong>JavaScript</strong> and <strong>Python</strong>.</p>
             <p>I love solving problems with code and enjoy building websites and small projects in my free time. My favorite part about programming is seeing my ideas come to life on the screen.</p>
             <p>Scroll down to see my skills and projects!</p>
         </section>
@@ -39,9 +44,37 @@
                 <li><span class="checkmark">✔</span> HTML &amp; CSS <span class="gh-badge mastered">Mastered</span></li>
                 <li><span class="checkmark">✔</span> JavaScript <span class="gh-badge learning">Learning</span></li>
                 <li><span class="checkmark">✔</span> Python <span class="gh-badge learning">Learning</span></li>
-                <li><span class="checkmark">✔</span> Responsive webdesign</li>
+                <li><span class="checkmark">✔</span> Responsive web design</li>
                 <li><span class="checkmark">✔</span> English (fluent), Dutch (native), German (basic), French (basic), Spanish (minimal)</li>
             </ul>
         </section>
-    </body>
+        <section id="projects" class="gh-card">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>This website! Built with HTML, CSS, and a bit of JavaScript. Responsive and modern design.</p>
+                    <a href="#" class="project-link" title="View project"><i class="fa fa-external-link"></i> Demo</a>
+                    <a href="https://github.com/lucas6412f1/Lucas-Siewe" rel="noopener noreferrer" class="project-link" title="View code" target="_blank"><i class="fa fa-github"></i> Code</a>
+                </div>
+                <div class="project-card empty">
+                    <h3>More projects coming soon!</h3>
+                    <p>Stay tuned for future updates as I learn and build more cool things.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="gh-card">
+            <h2>Contact</h2>
+            <p>Want to get in touch? You can reach me via my socials above or send me an email!</p>
+        </section>
+        <section id="resume" class="gh-card">
+            <h2>Resume</h2>
+            <p>Download my resume for more information about my education and skills.</p>
+            <a href="#" class="cv-download" download><i class="fa fa-download"></i> Download Resume (PDF)</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Lucas Siewe. Made with <i class="fa fa-heart"></i> by Lucas.</p>
+    </footer>
+</body>
 </html>
