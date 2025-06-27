@@ -146,153 +146,156 @@ body {
     border-radius: 6px;
 }
 
+/* --- SKILLS SECTION IMPROVEMENTS --- */
+.gh-card.skills-card {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 .skills-list {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    display: block;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
 }
-
 .skills-list li {
     font-size: 1.13rem;
     color: #24292f;
-    margin-bottom: 14px;
     padding-left: 2em;
     position: relative;
     line-height: 1.7;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    background: #f6f8fa;
+    border-radius: 14px;
+    box-shadow: 0 1px 4px rgba(46,160,67,0.07);
+    border: 1.5px solid #e1e4e8;
+    min-height: 38px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 18px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
 }
-
-.checkmark {
-    color: #2ea043;
+.skills-list li .checkmark {
+    color: #219150;
     font-size: 1.1em;
-    margin-right: 0.7em;
-    position: absolute;
+    margin-right: 10px;
+    position: relative;
     left: 0;
     top: 0.1em;
-    animation: pop 0.7s cubic-bezier(.68,-0.55,.27,1.55) 1;
 }
-@keyframes pop {
-    0% { transform: scale(0.5); opacity: 0; }
-    60% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(1); }
+.skill-label {
+    font-weight: 600;
+    margin-right: 8px;
+    color: #17692b;
+    letter-spacing: 0.01em;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
-
+.language-skills {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: #f6f8fa;
+    border-radius: 14px;
+    box-shadow: 0 1px 4px rgba(46,160,67,0.07);
+    border: 1.5px solid #e1e4e8;
+    min-height: 38px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    gap: 10px 18px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
+}
+.language-skills .skill-label {
+    color: #17692b;
+    font-size: 1.08em;
+    margin-right: 12px;
+    font-weight: 700;
+}
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 10px;
+    font-size: 1em;
+    margin-bottom: 2px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 .gh-badge {
     display: inline-block;
-    font-size: 0.85em;
+    font-size: 0.95em;
     font-weight: 600;
-    padding: 2px 10px;
+    padding: 2.5px 14px;
     border-radius: 12px;
     margin-left: 8px;
     vertical-align: middle;
     background: #e1e4e8;
     color: #57606a;
     letter-spacing: 0.5px;
+    border: 1.5px solid #e1e4e8;
+    transition: background 0.15s, color 0.15s, border 0.15s;
 }
 .gh-badge.mastered {
     background: #2ea043;
     color: #fff;
+    border: 1.5px solid #219150;
 }
 .gh-badge.learning {
     background: #fffbe6;
     color: #b08800;
-    border: 1px solid #ffe066;
+    border: 1.5px solid #ffe066;
 }
-
-.socials {
-    display: inline-flex;
-    gap: 16px;
-    margin-left: 12px;
-    vertical-align: middle;
+.gh-badge.medium {
+    background: #e6f4ea;
+    color: #219150;
+    border: 1.5px solid #2ea043;
 }
-
-.social-link {
-    color: #2ea043;
-    font-size: 1.08em;
-    background: none;
-    border-radius: 0;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.15s;
-    box-shadow: none;
-    border: none;
-    padding: 0;
-}
-
-.social-link:hover, .social-link:focus {
+.gh-badge.native {
+    background: #e6f4ea;
     color: #17692b;
-    background: none;
+    border: 2px solid #17692b;
+    font-weight: 700;
 }
-
-.social-link i {
-    margin: 0;
-    font-size: 1.1em;
+.gh-badge.fluent {
+    background: #e6f4ea;
+    color: #219150;
+    border: 2px solid #219150;
+    font-weight: 600;
 }
-
-.avatar-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 12px;
+.gh-badge.basic {
+    background: #fffbe6;
+    color: #b08800;
+    border: 2px solid #ffe066;
+    font-weight: 600;
 }
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #2ea043;
-    box-shadow: 0 8px 32px rgba(46,160,67,0.13);
-    object-fit: cover;
-    background: #fff;
-}
-
-main {
-    min-height: 60vh;
-    padding-bottom: 32px;
-}
-
-.projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: flex-start;
-}
-.project-card {
-    background: #f6f8fa;
-    border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(46,160,67,0.07);
-    padding: 20px 18px;
-    min-width: 240px;
-    flex: 1 1 260px;
-    transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
-    border: 2px solid #e1e4e8;
-}
-.project-card:hover {
-    transform: translateY(-7px) scale(1.04);
-    box-shadow: 0 10px 32px rgba(46,160,67,0.13);
-    border-color: #219150;
-}
-.project-card.empty {
-    opacity: 0.7;
-    text-align: center;
-    font-style: italic;
-}
-
-footer {
-    text-align: center;
-    padding: 24px 0 12px 0;
+.gh-badge.minimal {
+    background: #f0f0f0;
     color: #57606a;
-    font-size: 1.08rem;
-    background: linear-gradient(90deg, #e6f4ea 60%, #fff 100%);
-    border-radius: 16px 16px 0 0;
-    margin-top: 40px;
-    box-shadow: 0 -2px 12px rgba(46,160,67,0.07);
+    border: 2px solid #bdbdbd;
+    font-weight: 600;
+}
+.skills-list li .gh-badge {
+    margin-left: 8px;
+    margin-right: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.skills-list li .gh-badge:not(:last-child) {
+    margin-right: 4px;
+}
+.gh-badge, .lang-item, .skill-label, .skills-list li, .language-skills {
+    text-decoration: none !important;
 }
 
+.navbar a, .project-link {
+    text-decoration: none !important;
+}
 @media (max-width: 600px) {
     .header {
         padding: 14px 0 8px 0;
@@ -317,5 +320,22 @@ footer {
     footer {
         font-size: 0.98rem;
         border-radius: 8px 8px 0 0;
+    }
+    .skills-list {
+        gap: 8px;
+    }
+    .skills-list li {
+        font-size: 1rem;
+        padding-left: 1.5em;
+        min-height: 32px;
+        padding-right: 8px;
+    }
+    .language-skills {
+        gap: 6px 6px;
+        padding-right: 8px;
+    }
+    .lang-item {
+        font-size: 0.95em;
+        margin-right: 6px;
     }
 }
