@@ -448,10 +448,9 @@ body {
     border-bottom: 2px solid #fff;
     z-index: 2;
 }
-#timeline-coding, #timeline-school {
+#timeline-coding{
     display: none;
 }
-#timeline-coding.active, #timeline-school.active {
     display: block;
     animation: fadeInTimeline 0.5s;
 }

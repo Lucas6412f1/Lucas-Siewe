@@ -36,31 +36,23 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 document.addEventListener('DOMContentLoaded', function () {
     const codingBtn = document.getElementById('show-coding-timeline');
-    const schoolBtn = document.getElementById('show-school-timeline');
+
     const codingTimeline = document.getElementById('timeline-coding');
-    const schoolTimeline = document.getElementById('timeline-school');
+
 
     function showTimeline(type) {
         if (type === 'coding') {
             codingBtn.classList.add('active');
-            schoolBtn.classList.remove('active');
             codingTimeline.classList.add('active');
-            schoolTimeline.classList.remove('active');
         } else {
-            schoolBtn.classList.add('active');
             codingBtn.classList.remove('active');
-            schoolTimeline.classList.add('active');
             codingTimeline.classList.remove('active');
         }
     }
-
+ console.log(codingBtn)
     codingBtn.addEventListener('click', function () {
         showTimeline('coding');
     });
-    schoolBtn.addEventListener('click', function () {
-        showTimeline('school');
-    });
-
     // Default: show coding timeline
     showTimeline('coding');
 });
