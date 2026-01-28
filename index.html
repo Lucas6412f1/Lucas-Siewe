@@ -6,18 +6,20 @@
     <link rel="stylesheet" href="style.css">
     <title>Home - Lucas Siewe</title>
 </head>
-<body>
+<body class="home">
     <header>
-        <nav>
-            <button id="lang-toggle" onclick="setLanguage(currentLanguage === 'nl' ? 'en' : 'nl')">English</button>
-            <ul>
-                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                <li><a href="about.html" data-i18n="nav.about">Over</a></li>
-                <li><a href="skills.html" data-i18n="nav.skills">Vaardigheden</a></li>
-                <li><a href="project.html" data-i18n="nav.projects">Projecten</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-        </nav>
+            <div class="topnav">
+            <div id="myLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">Over</a>
+                <a href="Project.html">Projecten</a>
+                <a href="Contact.html">Contact</a>
+                <a href="skills.html">Vaardigheden</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            </div>
         <img src="Pfp.png" alt="Lucas" class="header-image">
        <div class="title">
             <h1>Lucas Siewe</h1>
@@ -26,10 +28,13 @@
     </header>
 
     <main>
-        <section id="welcome" class="content">
-            <h2 data-i18n="index.welcome">Welkom op mijn Portfolio</h2>
-            <p data-i18n="index.description">Ontdek mijn projecten en neem gerust contact met me op!</p>
-            <a href="contact.html"><button data-i18n="index.button">Neem Contact Op</button></a>
+        <section id="welcome" class="hero-full">
+            <div class="hero-overlay"></div>
+            <div class="content">
+                <h2 data-i18n="index.welcome">Welkom op mijn Portfolio</h2>
+                <p data-i18n="index.description">Ontdek mijn projecten en neem gerust contact met me op!</p>
+                <a href="contact.html"><button data-i18n="index.button">Neem Contact Op</button></a>
+            </div>
         </section>
     </main>
 
@@ -38,5 +43,15 @@
     </footer>
 
     <script src="i18n.js"></script>
+    <script>
+function HamburgerMenu() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 </body>
 </html>
