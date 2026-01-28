@@ -9,35 +9,33 @@
 <body>
     <header>
         <nav>
+            <button id="lang-toggle" onclick="setLanguage(currentLanguage === 'nl' ? 'en' : 'nl')">English</button>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Over</a></li>
-                <li><a href="skills.html">Vaardigheden</a></li>
-                <li><a href="project.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Over</a></li>
+                <li><a href="skills.html" data-i18n="nav.skills">Vaardigheden</a></li>
+                <li><a href="project.html" data-i18n="nav.projects">Projecten</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
         <h1>Lucas Siewe</h1>
-        <p>Professionele titel: Nog niks</p>
+        <p data-i18n="common.profession">Professionele titel: Nog niks</p>
     </header>
 
     <main>
         <section id="contact" class="content">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Naam:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Bericht:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Verstuur</button>
-            </form>
+            <h2 data-i18n="contact.heading">Contact</h2>
+            <p data-i18n="contact.description">Heb je vragen? Stuur me een email!</p>
+            <a href="mailto:Lucas6412f1@gmail.com" class="email-link">
+                <button data-i18n="contact.button">Email: Lucas6412f1@gmail.com</button>
+            </a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Lucas Siewe. All rights reserved.</p>
+        <p data-i18n="common.copyright">© 2026 Lucas Siewe. All rights reserved.</p>
     </footer>
+
+    <script src="i18n.js"></script>
 </body>
 </html>

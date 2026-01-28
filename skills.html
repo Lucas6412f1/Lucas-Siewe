@@ -9,22 +9,23 @@
 <body>
     <header>
         <nav>
+            <button id="lang-toggle" onclick="setLanguage(currentLanguage === 'nl' ? 'en' : 'nl')">English</button>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Over</a></li>
-                <li><a href="skills.html">Vaardigheden</a></li>
-                <li><a href="project.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Over</a></li>
+                <li><a href="skills.html" data-i18n="nav.skills">Vaardigheden</a></li>
+                <li><a href="project.html" data-i18n="nav.projects">Projecten</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
         <h1>Lucas Siewe</h1>
-        <p>Professionele titel: Nog niks</p>
+        <p data-i18n="common.profession">Professionele titel: Nog niks</p>
     </header>
 
     <main>
         <section id="skills" class="content">
-            <h2>Vaardigheden</h2>
-            <ul>
+            <h2 data-i18n="skills.heading">Vaardigheden</h2>
+            <ul id="skills-list">
                 <li>HTML & CSS</li>
                 <li>JavaScript</li>
                 <li>Python</li>
@@ -35,7 +36,24 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Lucas Siewe. All rights reserved.</p>
+        <p data-i18n="common.copyright">© 2026 Lucas Siewe. All rights reserved.</p>
     </footer>
+
+    <script src="i18n.js"></script>
+    <script>
+        function updateSkills() {
+            const skills = getTranslation('skills.items');
+            const skillsList = document.getElementById('skills-list');
+            skillsList.innerHTML = skills.map(skill => `<li>${skill}</li>`).join('');
+        }
+        
+        const originalUpdatePageLanguage = updatePageLanguage;
+        updatePageLanguage = function() {
+            originalUpdatePageLanguage();
+            updateSkills();
+        };
+    </script>
+</body>
+</html>
 </body>
 </html>

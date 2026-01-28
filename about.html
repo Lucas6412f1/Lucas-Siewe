@@ -9,28 +9,32 @@
 <body>
     <header>
         <nav>
+            <button id="lang-toggle" onclick="setLanguage(currentLanguage === 'nl' ? 'en' : 'nl')">English</button>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Over</a></li>
-                <li><a href="skills.html">Vaardigheden</a></li>
-                <li><a href="project.html">Projecten</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Over</a></li>
+                <li><a href="skills.html" data-i18n="nav.skills">Vaardigheden</a></li>
+                <li><a href="project.html" data-i18n="nav.projects">Projecten</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </nav>
         <h1>Lucas Siewe</h1>
-        <p>Professionele titel: Nog niks</p>
+        <p data-i18n="common.profession">Professionele titel: Nog niks</p>
     </header>
 
     <main>
         <section id="about" class="content">
-            <h2>Over Mij</h2>
-            <p>Hallo! Ik ben Lucas Siewe, 13 jaar oud gebaseerd in Lelystad, Flevoland. Ik ben begonnen met coderen toen ik 12 was.<br>
-            Mijn droom is om te werken bij ProRail of de NS, omdat ik een enorme fan ben van Treinen en de techniek erachter.</p>
+            <h2 data-i18n="about.heading">Over Mij</h2>
+            <p data-i18n-html="about.text">Hallo! Ik ben Lucas Siewe, 13 jaar oud gebaseerd in Lelystad, Flevoland. Ik ben begonnen met coderen toen ik 12 was.<br>Mijn droom is om te werken bij ProRail of de NS, omdat ik een enorme fan ben van Treinen en de techniek erachter.</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Lucas Siewe. All rights reserved.</p>
+        <p data-i18n="common.copyright">© 2026 Lucas Siewe. All rights reserved.</p>
     </footer>
+
+    <script src="i18n.js"></script>
+</body>
+</html>
 </body>
 </html>
